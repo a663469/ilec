@@ -8,6 +8,10 @@ public class ChipResistor extends Component {
     private float Tolerance;
     private String name;
 
+    public ChipResistor(String str) {
+        super(str);
+    }
+
     public String getName() {
         return this.name;
     }

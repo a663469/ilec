@@ -8,6 +8,10 @@ public class ChipCapacitor extends Component {
     private float tolerance;
     private String name;
 
+    public ChipCapacitor(String str) {
+        super(str);
+    }
+
     public String getName() {
         return this.name;
     }

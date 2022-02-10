@@ -1,5 +1,7 @@
 package ElecElements;
 
+import ElecElements.Resistors.ChipResistor;
+
 public class Components {
 
     private Component[] cmps;
@@ -11,7 +13,7 @@ public class Components {
     }
 
     public void addNewComponents(String str) {
-        cmps[count_cmps] = new Component(str);
+        cmps[count_cmps] = new ChipResistor(str);
         System.out.println(str + " add to cmps");
         count_cmps++;
     }
