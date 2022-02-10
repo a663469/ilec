@@ -2,12 +2,23 @@ package ElecElements;
 
 public class Components {
 
-    private Object component;
-    private String[] partNumbers;
-    private int id;
-    private String codeComponent; //Зашифраованный код компонента по своим правилам
+    private Component[] cmps;
+    private int count_cmps;
 
-    public Components(String partNumber) {
+    public Components() {
+        cmps = new Component[50];
+        System.out.println("Created new Component lib");
+    }
 
+    public void addNewComponents(String str) {
+        cmps[count_cmps] = new Component(str);
+        System.out.println(str + " add to cmps");
+        count_cmps++;
+    }
+
+    public void printComponents() {
+        for(int i = 0; i < count_cmps; i++) {
+            System.out.println((cmps[i]).getCodeComponent() + " from cmps");
+        }
     }
 }
