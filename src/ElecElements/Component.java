@@ -1,16 +1,13 @@
 package ElecElements;
 
 public class Component {
-    private Object component;
-    private String[] partNumbers;
-    private int id;
-    private String codeComponent; //Зашифраованный код компонента по своим правилам
+    private String initialStr;
 
     public Component(String str) {
-        this.codeComponent = str;
+        this.initialStr = str;
     }
 
-    public String getCodeComponent() {
-        return codeComponent;
+    public String getInitialStr() {
+        return initialStr;
     }
 }
