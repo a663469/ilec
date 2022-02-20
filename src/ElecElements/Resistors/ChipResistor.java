@@ -28,7 +28,10 @@ public class ChipResistor extends Component {
     }
 
     public String toString() {
-        return "Resistor " + resistance + tolerance + caseSize;
+        return "Resistor " + resistance + " " + tolerance + " " + caseSize;
     }
 
+    public String getResistance() {
+        return resistance;
+    }
 }

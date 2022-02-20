@@ -29,5 +29,9 @@ public class Main {
         }
 
         lib.printComponents();
+
+        System.out.println("resVal:");
+        lib.resValue();
+
     }
 }

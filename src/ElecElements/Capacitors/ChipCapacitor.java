@@ -30,6 +30,6 @@ public class ChipCapacitor extends Component {
     }
 
     public String toString() {
-        return "Capacitor " + capacity + voltage + caseSize + dielectric;
+        return "Capacitor " + capacity + " " + voltage + " " + caseSize + " " + dielectric;
     }
 }
