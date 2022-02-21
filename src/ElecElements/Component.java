@@ -1,13 +1,18 @@
 package ElecElements;
 
-public class Component {
-    private String initialStr;
+public abstract class Component implements ComponentInterface{
 
-    public Component(String str) {
-        this.initialStr = str;
+    private String name;
+
+    public Component(String name) {
+        this.name = name;
     }
 
-    public String getInitialStr() {
-        return initialStr;
+    public String getName() {
+        return this.name;
     }
+
+    //abstract public Component(String str);
+
+    //abstract public String getInitialStr();
 }

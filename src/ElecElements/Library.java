@@ -1,8 +1,5 @@
 package ElecElements;
 
-import ElecElements.Capacitors.ChipCapacitor;
-import ElecElements.Resistors.ChipResistor;
-
 public class Library {
 
     private Component[] cmps;
@@ -15,12 +12,12 @@ public class Library {
         System.out.println("Created new Component lib");
     }
 
-    public void addNewComponent(String str) {
+    public boolean addNewComponent(String str) {
         if(size_arr > count_cmps) {
             if(str.indexOf("Резистор") == 0) {
-                cmps[count_cmps] = new ChipResistor(str);
-            } else if (str.indexOf("Конденсатор") == 0) {
-                cmps[count_cmps] = new ChipCapacitor(str);
+                cmps[count_cmps] = new Resistors(str);
+//            } else if (str.indexOf("Конденсатор") == 0) {
+//                cmps[count_cmps] = new Capacitors(str);
             } else {
                 System.out.println("Failed to recognize the element");
             }
@@ -40,8 +37,8 @@ public class Library {
 
     public void resValue() {
         for (Component a : cmps) {
-            if (a instanceof ChipResistor) {
-                System.out.println(((ChipResistor) a).getResistance());
+            if (a instanceof Resistors) {
+                System.out.println(((Resistors) a).getResistance());
             }
         }
     }
