@@ -1,4 +1,5 @@
 import ElecElements.Library;
+import ElecElements.Resistors;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,5 +30,7 @@ public class Main {
         }
 
         lib.printComponents();
+
+
     }
 }

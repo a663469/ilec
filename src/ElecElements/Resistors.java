@@ -1,22 +1,18 @@
 package ElecElements;
 
-public class Resistors extends Component {
+public class Resistors extends Component implements ComponentInterface{
     private String resistance;
     private String tolerance;
     private String caseSize;
-    private String[] keyName = {"резистор", "resistor"};
+    private static String[] keyName = {"резистор", "resistor"};
+
 
     public Resistors(String str) {
         super(str);
-//        if(checkName(str)) {
-//            System.out.println("Add new Res!");
-//        } else {
-//            System.out.println("Error in the name!");
-//        }
     }
 
-    @Override
-    public String[] getKeyName() {
+//    @Override
+    public static String[] getKeyName() {
         return keyName;
     }
 
@@ -31,9 +27,10 @@ public class Resistors extends Component {
 //        return false;
 //    }
 //
-    public String toString() {
-        return "Resistor " + resistance + " " + tolerance + " " + caseSize;
-    }
+
+//    public String toString() {
+//        return "Resistor " + resistance + " " + tolerance + " " + caseSize;
+//    }
 
     public String getResistance() {
         return resistance;
