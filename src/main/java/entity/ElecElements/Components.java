@@ -1,6 +1,6 @@
-package ElecElements;
+package entity.ElecElements;
 
-import ElecElements.Resistors.ChipResistor;
+import entity.ElecElements.Resistors.ChipResistor;
 
 public class Components {
 

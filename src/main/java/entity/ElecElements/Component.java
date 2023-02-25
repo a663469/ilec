@@ -1,4 +1,4 @@
-package ElecElements;
+package entity.ElecElements;
 
 public class Component {
     private Object component;

@@ -1,6 +1,6 @@
-package ElecElements.Resistors;
+package entity.ElecElements.Resistors;
 
-import ElecElements.Component;
+import entity.ElecElements.Component;
 
 public class ChipResistor extends Component {
     private float Resistance;
