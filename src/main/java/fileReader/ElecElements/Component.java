@@ -1,4 +1,4 @@
-package entity.ElecElements;
+package fileReader.ElecElements;
 
 public class Component {
     private Object component;

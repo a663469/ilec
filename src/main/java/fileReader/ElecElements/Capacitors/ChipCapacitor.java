@@ -1,6 +1,6 @@
-package entity.ElecElements.Capacitors;
+package fileReader.ElecElements.Capacitors;
 
-import entity.ElecElements.Component;
+import fileReader.ElecElements.Component;
 
 public class ChipCapacitor extends Component {
     private float capacity;

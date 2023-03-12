@@ -1,4 +1,6 @@
-import entity.ElecElements.*;
+package fileReader;
+
+import fileReader.ElecElements.Components;
 
 public class App {
     public static void main(String[] args) {
