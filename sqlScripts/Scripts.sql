@@ -4,6 +4,10 @@ DROP TABLE ilec.specific_components;
 DROP TABLE ilec.components;
 DROP TABLE ilec.sch_symbol_ref;
 DROP TABLE ilec.footprint_ref;
+DROP TABLE ilec.manufacturer_ref;
+DROP TABLE ilec.part_status_ref;
+DROP TABLE ilec.temp_range_ref;
+
 
 CREATE TABLE ilec.sch_symbol_ref (
     id int NOT NULL AUTO_INCREMENT,
@@ -17,6 +21,35 @@ COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE ilec.footprint_ref (
     id int NOT NULL AUTO_INCREMENT,
     footprint_name varchar(100),
+    PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE ilec.manufacturer_ref (
+    id int NOT NULL AUTO_INCREMENT,
+    manufacturer varchar(100),
+    country varchar(100),
+    PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE ilec.part_status_ref (
+    id int NOT NULL AUTO_INCREMENT,
+    part_status varchar(100),
+    PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE ilec.temp_range_ref (
+    id int NOT NULL AUTO_INCREMENT,
+    min_temp int,
+    max_temp int,
     PRIMARY KEY (id)
 )
 ENGINE=InnoDB
@@ -39,9 +72,16 @@ COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE ilec.specific_components (
     id int NOT NULL AUTO_INCREMENT,
     part_number varchar(100),
+    help_url varchar(100),
     component_id int NOT NULL,
+    manufacturer_id int NOT NULL,
+    part_status_id int NOT NULL,
+    temp_range_id int NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (component_id) REFERENCES ilec.components(id)
+    FOREIGN KEY (component_id) REFERENCES ilec.components(id),
+    FOREIGN KEY (manufacturer_id) REFERENCES ilec.manufacturer_ref(id),
+    FOREIGN KEY (part_status_id) REFERENCES ilec.part_status_ref(id),
+    FOREIGN KEY (temp_range_id) REFERENCES ilec.temp_range_ref(id)
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4

@@ -19,11 +19,11 @@ public class Component {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
+
     @NonNull
     @Column(name = "component_name")
     private String componentName;
 
-    //{CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "component", fetch = FetchType.LAZY)
     @ToString.Exclude
     private List<SpecificComponent> specificComponentList;
@@ -45,7 +45,4 @@ public class Component {
         specificComponentList.add(specificComponent);
         specificComponent.setComponent(this);
     }
-
-
-
 }

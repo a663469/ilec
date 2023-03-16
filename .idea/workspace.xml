@@ -5,33 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79baa47a-4f94-4496-aa07-5f7212c9e8e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sqlScripts/Scripts.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Calc/CalculateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/SessionIlec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/ComponentFormSPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/SpecificComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/CategoryRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ComponentRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/FootprintRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/GroupRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ManufacturerRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/PartStatusRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/SchSymbolRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/TempRangeRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate_ilec.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Calc/CalculateUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hibernate/TestSessionForGetDataFromSPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileReader/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/MyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ComponentFormSPO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ElecElements/Capacitors/ChipCapacitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileReader/ElecElements/Capacitors/ChipCapacitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ElecElements/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileReader/ElecElements/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ElecElements/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileReader/ElecElements/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ElecElements/Resistors/ChipResistor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileReader/ElecElements/Resistors/ChipResistor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/SessionForGetDataFromSPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/SessionForGetDataFromSPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlScripts/Scripts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sqlScripts/Scripts.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/SessionIlec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/SessionIlec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/SpecificComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/SpecificComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ManufacturerRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ManufacturerRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/PartStatusRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/PartStatusRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/TempRangeRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/TempRangeRef.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
