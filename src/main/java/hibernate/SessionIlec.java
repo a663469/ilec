@@ -9,8 +9,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-
 public class SessionIlec {
     public static void main(String[] args) throws HibernateException {
         SessionFactory factory = new Configuration()
@@ -22,6 +20,9 @@ public class SessionIlec {
                 .addAnnotatedClass(ManufacturerRef.class)
                 .addAnnotatedClass(PartStatusRef.class)
                 .addAnnotatedClass(TempRangeRef.class)
+                .addAnnotatedClass(ComponentRef.class)
+                .addAnnotatedClass(GroupRef.class)
+                .addAnnotatedClass(CategoryRef.class)
                 .buildSessionFactory();
         Session session = null;
         try {
@@ -42,8 +43,19 @@ public class SessionIlec {
                 PartStatusRef psr = new PartStatusRef("Active");
                 session.save(psr);
 
-                TempRangeRef trr = new TempRangeRef(-40, +80);
+                TempRangeRef trr = new TempRangeRef(-40, 80);
                 session.save(trr);
+
+                ComponentRef cmpr = new ComponentRef("Resistors");
+                session.save(cmpr);
+
+                GroupRef gr = new GroupRef("Chip");
+                cmpr.addGroup(gr);
+                session.save(gr);
+
+                CategoryRef cr = new CategoryRef("0402");
+                gr.addCategoryRef(cr);
+                session.save(cr);
 
                 SpecificComponent sc1 = new SpecificComponent("RC0402FR-075K1L", "datasheets");
                 mfr.addSpecificComponent(sc1);
@@ -56,11 +68,14 @@ public class SessionIlec {
                 trr.addSpecificComponent(sc2);
 
                 Component cmp = new Component("CR-0402-5K1-J");
-                cmp.addSpecificComponentToComponent(sc1);
-                cmp.addSpecificComponentToComponent(sc2);
+                cmp.addSpecificComponent(sc1);
+                cmp.addSpecificComponent(sc2);
 
-                sch.addComponentToSchSymbolRef(cmp);
-                fr.addComponentToFootprintRef(cmp);
+                sch.addComponent(cmp);
+                fr.addComponent(cmp);
+                cmp.setComponentRef(cmpr);
+                gr.addComponent(cmp);
+                cr.addComponent(cmp);
 
                 session.save(cmp);
 

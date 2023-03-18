@@ -1,7 +1,6 @@
 package hibernate.entity.component;
 
-import hibernate.entity.component.references.FootprintRef;
-import hibernate.entity.component.references.SchSymbolRef;
+import hibernate.entity.component.references.*;
 import lombok.*;
 
 import javax.persistence.*;
@@ -24,9 +23,6 @@ public class Component {
     @Column(name = "component_name")
     private String componentName;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "component", fetch = FetchType.LAZY)
-    @ToString.Exclude
-    private List<SpecificComponent> specificComponentList;
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "sch_symbol_id")
@@ -38,7 +34,26 @@ public class Component {
     @ToString.Exclude
     private FootprintRef footprintRef;
 
-    public void addSpecificComponentToComponent(SpecificComponent specificComponent){
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "component_ref_id")
+    @ToString.Exclude
+    private ComponentRef componentRef;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "group_ref_id")
+    @ToString.Exclude
+    private GroupRef groupRef;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "category_ref_id")
+    @ToString.Exclude
+    private CategoryRef categoryRef;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "component", fetch = FetchType.LAZY)
+    @ToString.Exclude
+    private List<SpecificComponent> specificComponentList;
+
+    public void addSpecificComponent(SpecificComponent specificComponent){
         if(specificComponentList == null) {
             specificComponentList = new ArrayList<>();
         }

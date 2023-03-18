@@ -20,7 +20,7 @@ public class SchSymbolRef {
     @Column(name = "id")
     private int id;
     @NonNull
-    @Column(name = "sch_symbol_name")
+    @Column(name = "sch_symbol_name", unique=true)
     private String name;
     //@OneToMany(cascade = CascadeType.ALL, mappedBy = "schSymbolRef", fetch = FetchType.LAZY)
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH},
@@ -28,7 +28,7 @@ public class SchSymbolRef {
     @ToString.Exclude
     private List<Component> components;
 
-    public void addComponentToSchSymbolRef(Component cmp){
+    public void addComponent(Component cmp){
         if(components == null) {
             components = new ArrayList<>();
         }

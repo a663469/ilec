@@ -19,14 +19,14 @@ public class FootprintRef {
     @Column(name = "id")
     private int id;
     @NonNull
-    @Column(name = "footprint_name")
+    @Column(name = "footprint_name", unique=true)
     private String name;
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH},
             mappedBy = "footprintRef", fetch = FetchType.LAZY)
     @ToString.Exclude
     private List<Component> components;
 
-    public void addComponentToFootprintRef(Component cmp){
+    public void addComponent(Component cmp){
         if(components == null) {
             components = new ArrayList<>();
         }

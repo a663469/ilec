@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79baa47a-4f94-4496-aa07-5f7212c9e8e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sqlScripts/Scripts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sqlScripts/Scripts.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/SessionIlec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/SessionIlec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/SpecificComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/SpecificComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ManufacturerRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ManufacturerRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/PartStatusRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/PartStatusRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/TempRangeRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/TempRangeRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/CategoryRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/CategoryRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ComponentRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ComponentRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/FootprintRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/FootprintRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/GroupRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/GroupRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/SchSymbolRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/SchSymbolRef.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
