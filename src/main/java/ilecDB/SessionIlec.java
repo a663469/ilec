@@ -1,9 +1,9 @@
-package hibernate;
+package ilecDB;
 
 
-import hibernate.entity.component.Component;
-import hibernate.entity.component.SpecificComponent;
-import hibernate.entity.component.references.*;
+import ilecDB.entity.Component;
+import ilecDB.entity.SpecificComponent;
+import ilecDB.entity.references.*;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,7 +15,7 @@ public class SessionIlec {
                 .configure("hibernate_ilec.cfg.xml")
                 .addAnnotatedClass(Component.class)
                 .addAnnotatedClass(SpecificComponent.class)
-                .addAnnotatedClass(SchSymbolRef.class)
+                .addAnnotatedClass(SchSymbol.class)
                 .addAnnotatedClass(FootprintRef.class)
                 .addAnnotatedClass(ManufacturerRef.class)
                 .addAnnotatedClass(PartStatusRef.class)
@@ -31,58 +31,53 @@ public class SessionIlec {
 
             // Запись данных в БД
             {
-                SchSymbolRef sch = new SchSymbolRef("res");
+                SchSymbol sch = new SchSymbol("vt");
                 session.save(sch);
 
-                FootprintRef fr = new FootprintRef("R2_0402");
-                session.save(fr);
-
-                ManufacturerRef mfr = new ManufacturerRef("Yageo", "Chine");
-                session.save(mfr);
-
-                PartStatusRef psr = new PartStatusRef("Active");
-                session.save(psr);
-
-                TempRangeRef trr = new TempRangeRef(-40, 80);
-                session.save(trr);
-
-                ComponentRef cmpr = new ComponentRef("Resistors");
-                session.save(cmpr);
-
-                GroupRef gr = new GroupRef("Chip");
-                cmpr.addGroup(gr);
-                session.save(gr);
-
-                CategoryRef cr = new CategoryRef("0402");
-                gr.addCategoryRef(cr);
-                session.save(cr);
-
-                SpecificComponent sc1 = new SpecificComponent("RC0402FR-075K1L", "datasheets");
-                mfr.addSpecificComponent(sc1);
-                psr.addSpecificComponent(sc1);
-                trr.addSpecificComponent(sc1);
-
-                SpecificComponent sc2 = new SpecificComponent("RC0402JR-075K1L", "datasheets");
-                mfr.addSpecificComponent(sc2);
-                psr.addSpecificComponent(sc2);
-                trr.addSpecificComponent(sc2);
-
-                Component cmp = new Component("CR-0402-5K1-J");
-                cmp.addSpecificComponent(sc1);
-                cmp.addSpecificComponent(sc2);
-
-                sch.addComponent(cmp);
-                fr.addComponent(cmp);
-                cmp.setComponentRef(cmpr);
-                gr.addComponent(cmp);
-                cr.addComponent(cmp);
-
-                session.save(cmp);
-
-                System.out.println(sch.getComponents());
-
-                for (SpecificComponent sc : cmp.getSpecificComponentList())
-                    System.out.println(sc);
+//                FootprintRef fr = new FootprintRef("R2_0402");
+//                session.save(fr);
+//
+//                ManufacturerRef mfr = new ManufacturerRef("Yageo", "Chine");
+//                session.save(mfr);
+//
+//                PartStatusRef psr = new PartStatusRef("Active");
+//                session.save(psr);
+//
+//                TempRangeRef trr = new TempRangeRef(-40, 80);
+//                session.save(trr);
+//
+//                ComponentRef cmpr = new ComponentRef("Resistors");
+//                session.save(cmpr);
+//
+//                GroupRef gr = new GroupRef("Chip");
+//                cmpr.addGroup(gr);
+//                session.save(gr);
+//
+//                CategoryRef cr = new CategoryRef("0402");
+//                gr.addCategoryRef(cr);
+//                session.save(cr);
+//
+//                SpecificComponent sc1 = new SpecificComponent("RC0402FR-075K1L", "datasheets");
+//                mfr.addSpecificComponent(sc1);
+//                psr.addSpecificComponent(sc1);
+//                trr.addSpecificComponent(sc1);
+//
+//                SpecificComponent sc2 = new SpecificComponent("RC0402JR-075K1L", "datasheets");
+//                mfr.addSpecificComponent(sc2);
+//                psr.addSpecificComponent(sc2);
+//                trr.addSpecificComponent(sc2);
+//
+//                Component cmp = new Component("CR-0402-5K1-J");
+//                cmp.addSpecificComponent(sc1);
+//                cmp.addSpecificComponent(sc2);
+//
+//                sch.addComponent(cmp);
+//                fr.addComponent(cmp);
+//                cmp.setComponentRef(cmpr);
+//                gr.addComponent(cmp);
+//                cr.addComponent(cmp);
+//
+//                session.save(cmp);
             }
 
             // Чтение одного объекта с БД

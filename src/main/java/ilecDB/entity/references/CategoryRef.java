@@ -1,6 +1,6 @@
-package hibernate.entity.component.references;
+package ilecDB.entity.references;
 
-import hibernate.entity.component.Component;
+import ilecDB.entity.Component;
 import lombok.*;
 
 import javax.persistence.*;

@@ -1,6 +1,6 @@
-package hibernate.entity.component;
+package ilecDB.entity;
 
-import hibernate.entity.component.references.*;
+import ilecDB.entity.references.*;
 import lombok.*;
 
 import javax.persistence.*;
@@ -27,7 +27,7 @@ public class Component {
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "sch_symbol_id")
     @ToString.Exclude
-    private SchSymbolRef schSymbolRef;
+    private SchSymbol schSymbol;
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "footprint_id")

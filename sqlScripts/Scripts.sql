@@ -76,7 +76,7 @@ COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE ilec.group_ref_list (
     id int NOT NULL AUTO_INCREMENT,
     group_ref varchar(100),
-    component_ref_id int NOT NULL,
+    component_ref_id int,
     PRIMARY KEY (id),
     FOREIGN KEY (component_ref_id) REFERENCES ilec.component_ref_list(id),
     UNIQUE(group_ref, component_ref_id)
@@ -88,7 +88,7 @@ COLLATE=utf8mb4_0900_ai_ci;
 CREATE TABLE ilec.category_ref_list (
     id int NOT NULL AUTO_INCREMENT,
     category_ref varchar(100),
-    group_ref_id int NOT NULL,
+    group_ref_id int,
     PRIMARY KEY (id),
     FOREIGN KEY (group_ref_id) REFERENCES ilec.group_ref_list(id),
     UNIQUE(category_ref, group_ref_id)

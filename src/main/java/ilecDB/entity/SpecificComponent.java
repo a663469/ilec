@@ -1,8 +1,8 @@
-package hibernate.entity.component;
+package ilecDB.entity;
 
-import hibernate.entity.component.references.ManufacturerRef;
-import hibernate.entity.component.references.PartStatusRef;
-import hibernate.entity.component.references.TempRangeRef;
+import ilecDB.entity.references.ManufacturerRef;
+import ilecDB.entity.references.PartStatusRef;
+import ilecDB.entity.references.TempRangeRef;
 import lombok.*;
 
 import javax.persistence.*;

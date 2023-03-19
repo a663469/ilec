@@ -1,4 +1,4 @@
-package hibernate;
+package ilecDB;
 
 public class TestSessionForGetDataFromSPO {
 }
