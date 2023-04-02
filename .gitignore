@@ -28,3 +28,4 @@ myApp.properties
 hibernate.cfg.xml
 /src/main/resources/hibernate_ilec.cfg.xml
 /sqlScripts/.project
+.idea
