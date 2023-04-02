@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79baa47a-4f94-4496-aa07-5f7212c9e8e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ilecDB/SessionSchSymbol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spobreo/ComponentFormSPO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlScripts/Scripts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sqlScripts/Scripts.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/SessionForGetDataFromSPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spobreo/SessionForGetDataFromSPO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/SessionIlec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/SessionIlec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/ComponentFormSPO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/SpecificComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/SpecificComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/CategoryRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/references/CategoryRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ComponentRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/references/ComponentRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/FootprintRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/references/FootprintRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/GroupRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/references/GroupRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/ManufacturerRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/references/ManufacturerRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/PartStatusRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/references/PartStatusRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/SchSymbolRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/references/SchSymbol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/component/references/TempRangeRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/entity/references/TempRangeRef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hibernate/TestSessionForGetDataFromSPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ilecDB/TestSessionForGetDataFromSPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ilecDB/SessionSchSymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ilecDB/SessionSchSymbol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spobreo/SessionForGetDataFromSPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spobreo/SessionForGetDataFromSPO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,8 +127,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App (1)" />
-        <item itemvalue="Application.SessionIlec" />
         <item itemvalue="Application.SessionForGetDataFromSPO" />
+        <item itemvalue="Application.SessionIlec" />
         <item itemvalue="JUnit.CalculateUtilTest" />
         <item itemvalue="Application.App" />
       </list>
