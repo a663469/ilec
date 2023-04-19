@@ -1,0 +1,62 @@
+package online.ilec.cmps.entity;
+
+import lombok.*;
+import online.ilec.cmps.entity.references.*;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+@ToString
+@RequiredArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "components")
+public class Component {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
+
+    @NonNull
+    @Column(name = "component_name")
+    private String componentName;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "sch_symbol_id")
+    @ToString.Exclude
+    private SchSymbol schSymbol;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "footprint_id")
+    @ToString.Exclude
+    private FootprintRef footprintRef;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "component_ref_id")
+    @ToString.Exclude
+    private ComponentRef componentRef;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "group_ref_id")
+    @ToString.Exclude
+    private GroupRef groupRef;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "category_ref_id")
+    @ToString.Exclude
+    private CategoryRef categoryRef;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "component", fetch = FetchType.LAZY)
+    @ToString.Exclude
+    private List<SpecificComponent> specificComponentList;
+
+    public void addSpecificComponent(SpecificComponent specificComponent){
+        if(specificComponentList == null) {
+            specificComponentList = new ArrayList<>();
+        }
+        specificComponentList.add(specificComponent);
+        specificComponent.setComponent(this);
+    }
+}
