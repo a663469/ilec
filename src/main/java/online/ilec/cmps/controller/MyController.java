@@ -19,7 +19,6 @@ public class MyController {
     public String showAllSchSymbols(Model model) {
         List<SchSymbol> allSchSymbols = ilecService.getAllSchSymbols();
         model.addAttribute("allSchSymbols", allSchSymbols);
-
         return "all-sch-symbols";
     }
 }
