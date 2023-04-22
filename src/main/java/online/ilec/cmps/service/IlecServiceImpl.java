@@ -18,4 +18,21 @@ public class IlecServiceImpl implements IlecService{
     public List<SchSymbol> getAllSchSymbols() {
         return ilecDAO.getAllSchSymbols();
     }
+    @Override
+    @Transactional
+    public void saveSchSymbol(SchSymbol schSymbol) {
+        ilecDAO.saveSchSymbol(schSymbol);
+    }
+
+    @Override
+    @Transactional
+    public SchSymbol getSchSymbol(int id) {
+        return ilecDAO.getSchSymbol(id);
+    }
+
+    @Override
+    @Transactional
+    public void deleteSchSymbol(int id) {
+        ilecDAO.deleteSchSymbol(id);
+    }
 }

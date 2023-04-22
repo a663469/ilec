@@ -13,6 +13,11 @@
 </head>
 <body>
 <h2>All SCH Symbols</h2>
+
+<input type="button" value="Add" onclick="window.location.href = '/ilec/addNewSchSymbol'"/>
+
+<br>
+
 <table>
     <tr>
         <th>ID</th>
@@ -20,15 +25,24 @@
         <th>Operations</th>
     </tr>
     <c:forEach var="schSymbol" items="${allSchSymbols}">
-        <c:url var="updateButton" value="/updateInfo">
-            <c:param name="SchSybolsId" value="${schSymbol.id}"/>
+        <c:url var="updateButton" value="/updateSchSymbol">
+            <c:param name="schSymbolId" value="${schSymbol.id}"/>
+        </c:url>
+        <c:url var="deleteButton" value="/deleteSchSymbol">
+            <c:param name="schSymbolId" value="${schSymbol.id}"/>
         </c:url>
         <tr>
             <td>${schSymbol.id}</td>
             <td>${schSymbol.name}</td>
-            <td><input type="button" value="Update" onClick="window.location.href = '${updateButton}'"/></td>
+            <td>
+                <input type="button" value="Update" onClick="window.location.href = '${updateButton}'"/>
+                <input type="button" value="Delete" onClick="window.location.href = '${deleteButton}'"/>
+            </td>
         </tr>
     </c:forEach>
 </table>
+
+<br>
+
 </body>
 </html>

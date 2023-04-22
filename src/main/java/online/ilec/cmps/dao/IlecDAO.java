@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface IlecDAO {
     public List<SchSymbol> getAllSchSymbols();
+    public void saveSchSymbol(SchSymbol schSymbol);
+    public SchSymbol getSchSymbol(int id);
+    public void deleteSchSymbol(int id);
 }
